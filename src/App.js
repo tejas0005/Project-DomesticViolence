@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import About from './pages/About';
 import Services from './pages/Services';
@@ -10,7 +11,7 @@ import LoginRegister from './Components/LoginRegister/LoginRegister';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div>
         <Routes>
           <Route path="/" element={<LoginRegister />} />
@@ -20,7 +21,7 @@ function App() {
           <Route path="/home" element={<Home />} /> 
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
