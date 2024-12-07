@@ -1,0 +1,147 @@
+/* General Container Styling */
+.legal-resources-container {
+    padding: 30px;
+    background: linear-gradient(135deg, #eef2f7, #d9e4f1); /* Light background gradient */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    color: #2e8b57;
+    margin-bottom: 10px;
+}
+p {
+    margin-top: 40px;  /* Moves the text down */
+    margin-left: 50px; /* Moves the text to the right */
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Search Section */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    color: #4caf50;
+    cursor: pointer;
+}
+
+/* Helplines List */
+.helplines-list {
+    margin-top: 30px;
+}
+
+.helplines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Helpline Card Styling */
+.helpline-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s;
+    text-align: center;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.helpline-card:hover {
+    transform: scale(1.05);
+}
+
+.helpline-card-header {
+    margin-bottom: 20px;
+}
+
+.helpline-card-header h4 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.helpline-card-header p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* Helpline Card Body */
+.helpline-card-body {
+    font-size: 1rem;
+    color: #555;
+}
+
+.helpline-card-body p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.helpline-card-body svg {
+    margin-right: 10px;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f44336;
+    margin-top: 20px;
+}
+/* Back Home Button */
+.back-home-container {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 30px; /* Distance from the right */
+    margin-bottom: 20px;
+}
+
+.back-home-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-home-button:hover {
+    background-color: #45a049;
+}

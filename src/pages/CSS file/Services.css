@@ -1,0 +1,99 @@
+/* Overall container for the services page */
+.services-container {
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Header section */
+.services-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Paragraph that introduces the services */
+.services-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Individual service box */
+.service {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Service title */
+.service h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Description text */
+.service p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Image styling */
+.service img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Image caption */
+.service i {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .services-container {
+        padding: 20px;
+    }
+
+    /* Stack service sections vertically */
+    .service {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    /* Smaller font for titles and descriptions on smaller screens */
+    .services-container h1 {
+        font-size: 2rem;
+    }
+
+    .service h2 {
+        font-size: 1.5rem;
+    }
+
+    .service p {
+        font-size: 0.9rem;
+    }
+
+    .service img {
+        max-width: 100%;
+    }
+}

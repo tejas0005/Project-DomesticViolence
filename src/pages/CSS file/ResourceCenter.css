@@ -1,0 +1,151 @@
+/* General Container Styling */
+.resource-center-container {
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f4f8, #d9e4f1); /* Soft gradient */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title Styling */
+.resource-center-title {
+    text-align: center;
+    color: #000000; /* Changed color to black */
+    margin-bottom: 20px;
+    font-size: 3rem; /* Increased font size for emphasis */
+    font-weight: bold; /* Added bold styling */
+    text-transform: uppercase; /* Optional: Makes the title uppercase */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin-top: 10px;
+}
+
+
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.search-icon {
+    margin-right: -30px;
+    margin-left: 10px;
+    color: #555;
+}
+
+/* Grid and Card Styling */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Smaller cards */
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.resource-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Resource Image */
+.resource-image {
+    width: 150px;
+    height: 228px;
+    object-fit: cover;
+    margin: 15px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.resource-image:hover {
+    transform: scale(1.05);
+}
+
+/* Resource Title */
+.resource-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004085;
+    margin: 10px 0;
+}
+
+/* Resource Description */
+.resource-description {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Download Button */
+.resource-link {
+    display: inline-block;
+    background-color: #6bed9f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.resource-link:hover {
+    background-color: #045631;
+    transform: translateY(-2px);
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 30px;
+}
+.back-home-container {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    margin-bottom: 20px;
+}
+
+.back-home-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-home-button:hover {
+    background-color: #45a049;
+}

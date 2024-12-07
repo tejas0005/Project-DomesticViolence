@@ -1,0 +1,139 @@
+.seek-help-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.seek-help-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.seek-help-header h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.seek-help-header p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-icon {
+    margin-left: -30px;
+    margin-top: 10px;
+    color: #888;
+    cursor: pointer;
+}
+
+.sessions-list {
+    margin-top: 20px;
+}
+
+.sessions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.session-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.session-card:hover {
+    transform: scale(1.05);
+}
+
+.session-card-header {
+    background-color: #f4f4f4;
+    padding: 15px;
+    text-align: center;
+}
+
+.session-card-header h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.session-card-body {
+    padding: 20px;
+}
+
+.session-card-body p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.session-card-footer {
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.book-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    background-color: #45a049;
+}
+
+.book-button-disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.status-available {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.status-unavailable {
+    color: #f44336;
+    font-weight: bold;
+}
+
+
+.back-home-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-home-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-home-button:hover {
+    background-color: #45a049;
+}

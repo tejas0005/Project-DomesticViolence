@@ -1,0 +1,178 @@
+/* Container styles */
+.health-container {
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header section */
+  .health-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .back-home-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Main content styles */
+  .health-content {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .health-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .health-content p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Search Bar Container */
+  .search-bar {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-input-container {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    color: #007bff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    box-shadow: none;
+}
+
+  /* Grid and Card Styling */
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for smaller, responsive cards */
+    gap: 20px;
+    padding: 0 10px;
+    justify-items: center;
+    margin-top: 30px;
+  }
+  
+  .book-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 220px; /* Adjusted for compact cards */
+    height: 320px; /* Adjusted height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Resource Image */
+  .book-image {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .book-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Resource Title */
+  .book-card h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Resource Description */
+  .book-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 10px;
+    padding: 0 5px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    
+    -webkit-box-orient: vertical;
+  }
+  
+  /* Download Button */
+  .download-link {
+    display: inline-block;
+    background-color: #6bed9f;
+    color: white;
+    padding: 10px 14px;  
+    border-radius: 10px;  
+    font-size: 0.8rem;  
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: fit-content;  
+    margin-left: 63px;
+  }
+  
+  
+  .download-link:hover {
+    background-color: #045631;
+    transform: translateY(-2px);
+  }
+  
+  /* No Results Message */
+  .no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 30px;
+  }
+  

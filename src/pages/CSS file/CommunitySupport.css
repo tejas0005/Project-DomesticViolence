@@ -1,0 +1,89 @@
+
+.community-support-container {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;  /* Applying the Roboto font globally */
+}
+
+.community-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.back-home-button {
+    background-color: #37e97e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.community-content {
+    text-align: center;
+}
+
+.search-bar {
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;  /* Ensure the search bar uses the same font */
+}
+
+.webinar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.webinar-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;  /* Applying the font to each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adding a subtle shadow to the card */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.webinar-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
+}
+
+.webinar-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.webinar-card p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.webinar-link {
+    display: inline-block;
+    background-color: #42ce7a;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.webinar-link:hover {
+    background-color: #1d853e;
+}

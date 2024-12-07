@@ -1,0 +1,103 @@
+.admin-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Prevents scrolling of the whole page */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: fixed; /* Fix the sidebar in place */
+  height: 100%; /* Sidebar should take full height */
+  top: 0; /* Align it to the top */
+  left: 0; /* Align it to the left */
+  z-index: 1000; /* Make sure it stays on top */
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header h2 {
+  color: #1abc9c;
+  font-size: 24px;
+}
+
+.menu {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  width: 100%;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.menu li a svg {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* This makes the counselor content scrollable */
+.admin-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+  margin-left: 250px; /* Ensure it doesn't overlap with the sidebar */
+  height: 100vh;
+  overflow-y: auto; /* Enables scrolling */
+  padding-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+}
+
+.welcome-message {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-button:hover {
+  color: #c0392b;
+}
