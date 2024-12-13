@@ -34,7 +34,7 @@ const IncidentReporting = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('/api/case-reports/add', {
+            const response = await fetch('https://backend-production-7345.up.railway.app/api/case-reports/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

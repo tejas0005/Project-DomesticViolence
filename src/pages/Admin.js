@@ -60,7 +60,7 @@ const [payments, setPayments] = useState([]);
 const fetchPayments = useCallback(async () => {
   setLoading(true);
   try {
-    const response = await axios.get("/api/payments/all"); // Replace with your correct endpoint
+    const response = await axios.get("https://backend-production-7345.up.railway.app/api/payments/all"); // Replace with your correct endpoint
     setPayments(response.data);
   } catch (error) {
     console.error("Error fetching payments:", error);
@@ -76,7 +76,7 @@ const fetchPayments = useCallback(async () => {
 const fetchHealthBooks = useCallback(async () => {
   setLoading(true);
   try {
-    const response = await axios.get("/api/healthbooks/all"); // Replace with your correct endpoint
+    const response = await axios.get("https://backend-production-7345.up.railway.app/api/healthbooks/all"); // Replace with your correct endpoint
     setHealthBooks(response.data);
   } catch (error) {
     console.error("Error fetching health books:", error);
@@ -89,7 +89,7 @@ const fetchHealthBooks = useCallback(async () => {
 const handleSaveHealthBook = async (healthBookId) => {
   console.log("Edited Health Data:", editedHealthData); // Log the data you're sending
   try {
-    const response = await axios.put(`/api/healthbooks/update/${healthBookId}`, editedHealthData);
+    const response = await axios.put(`https://backend-production-7345.up.railway.app/api/healthbooks/update/${healthBookId}`, editedHealthData);
 
     console.log("Response from backend:", response);  // Log response from backend
     
@@ -122,7 +122,7 @@ const handleDeleteHealthBook = async (healthBookId) => {
   console.log("Deleting Health Book with ID:", healthBookId);  // Log the ID being deleted
   if (window.confirm("Are you sure you want to delete this health book?")) {
     try {
-      const response = await axios.delete(`/api/healthbooks/delete/${healthBookId}`);
+      const response = await axios.delete(`https://backend-production-7345.up.railway.app/api/healthbooks/delete/${healthBookId}`);
 
       console.log("Delete response:", response);  // Log the delete response
 
@@ -164,7 +164,7 @@ const handleAddNewHealthBook = async () => {
 
   try {
     // Send new health book data to the backend
-    const response = await axios.post("/api/healthbooks/add", editedHealthData);
+    const response = await axios.post("https://backend-production-7345.up.railway.app/api/healthbooks/add", editedHealthData);
 
     // Display success message
     alert("Health Book added successfully!");
@@ -199,7 +199,7 @@ const handleAddNewHealthBook = async () => {
   const fetchArticlesAndGuides = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/articles/all"); // Replace with your correct endpoint
+      const response = await axios.get("https://backend-production-7345.up.railway.app/api/articles/all"); // Replace with your correct endpoint
       setArticlesAndGuides(response.data);
     } catch (error) {
       console.error("Error fetching articles and guides:", error);
@@ -211,7 +211,7 @@ const handleAddNewHealthBook = async () => {
   const handleSaveArticle = async (articleId) => {
     try {
       // Send updated data to the backend
-      await axios.put(`/api/articles/update/${articleId}`, editedArticleData);
+      await axios.put(`https://backend-production-7345.up.railway.app/api/articles/update/${articleId}`, editedArticleData);
       
       // Display success message
       alert("Article/Guide updated successfully!");
@@ -242,7 +242,7 @@ const handleAddNewHealthBook = async () => {
     if (window.confirm("Are you sure you want to delete this article/guide?")) {
       try {
         // Sending delete request to the server
-        await axios.delete(`/api/articles/delete/${articleId}`);
+        await axios.delete(`https://backend-production-7345.up.railway.app/api/articles/delete/${articleId}`);
         
         // Display success message
         alert("Article/Guide deleted successfully!");
@@ -280,7 +280,7 @@ const handleAddNewHealthBook = async () => {
   
     try {
       // Send new article data to the backend
-      const response = await axios.post("/api/articles/add", editedArticleData);
+      const response = await axios.post("https://backend-production-7345.up.railway.app/api/articles/add", editedArticleData);
   
       // Display success message
       alert("Article/Guide added successfully!");
@@ -303,7 +303,7 @@ const handleAddNewHealthBook = async () => {
   const fetchResources = useCallback(async (type) => {
     setLoading(true);
     try {
-      const response = await axios.get(`/api/${type}`); // Endpoint for specific resource type
+      const response = await axios.get(`https://backend-production-7345.up.railway.app/api/${type}`); // Endpoint for specific resource type
       setResources(response.data);
     } catch (error) {
       console.error("Error fetching resources:", error);
@@ -325,13 +325,13 @@ const handleAddNewHealthBook = async () => {
         let response;
         switch (resourceType) {
             case 'ebooks':
-                response = await axios.get('/api/ebooks/all');
+                response = await axios.get('https://backend-production-7345.up.railway.app/api/ebooks/all');
                 break;
             case 'shelters':
-                response = await axios.get('/api/shelters/all');
+                response = await axios.get('https://backend-production-7345.up.railway.app/api/shelters/all');
                 break;
             case 'helplines':
-                response = await axios.get('/api/helplines/all');
+                response = await axios.get('https://backend-production-7345.up.railway.app/api/helplines/all');
                 break;
             default:
                 break;
@@ -376,7 +376,7 @@ const handleInputChangeNewResource = (e, fieldName) => {
     if (window.confirm(`Are you sure you want to delete this resource?`)) {
       try {
         // First, delete the resource from the backend
-        await axios.delete(`/api/${selectedResourceType}/${resourceId}`);
+        await axios.delete(`https://backend-production-7345.up.railway.app/api/${selectedResourceType}/${resourceId}`);
         
         // Remove the resource from the local state immediately
         setResources((prevResources) => 
@@ -729,7 +729,7 @@ const handleSaveNewResource = async () => {
     // Prepare the data based on selected resource type
     switch (selectedResourceType) {
       case "ebooks":
-        endpoint = "/api/ebooks/add";
+        endpoint = "https://backend-production-7345.up.railway.app/api/ebooks/add";
         resourceData = {
           title: newResourceData.title,
           author: newResourceData.author,
@@ -738,7 +738,7 @@ const handleSaveNewResource = async () => {
         };
         break;
       case "shelters":
-        endpoint = "/api/shelters/add";
+        endpoint = "https://backend-production-7345.up.railway.app/api/shelters/add";
         resourceData = {
           shelterName: newResourceData.shelterName,
           owner: newResourceData.owner,
@@ -748,7 +748,7 @@ const handleSaveNewResource = async () => {
         };
         break;
       case "helplines":
-        endpoint = "/api/helplines/add";
+        endpoint = "https://backend-production-7345.up.railway.app/api/helplines/add";
         resourceData = {
           name: newResourceData.name,
           role: newResourceData.role,
@@ -982,7 +982,7 @@ const renderTableRows = () => {
       const totalUsers = users.filter((user) => user.role === "USER").length;
       const totalLegalAdvisors = users.filter((user) => user.role === "LEGAL ADVISOR").length;
       const totalCounselors = users.filter((user) => user.role === "COUNSELOR").length;
-      const donationResponse = await axios.get("/api/payments/summary");
+      const donationResponse = await axios.get("https://backend-production-7345.up.railway.app/api/payments/summary");
       const totalDonations = donationResponse.data.totalDonations || 0;
 
       setMetrics({
@@ -1016,7 +1016,7 @@ const renderTableRows = () => {
   const fetchCaseReports = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/case-reports/all"); // Endpoint for case reports
+      const response = await axios.get("https://backend-production-7345.up.railway.app/api/case-reports/all"); // Endpoint for case reports
       setCaseReports(response.data);
     } catch (error) {
       console.error("Error fetching case reports:", error);
@@ -1029,7 +1029,7 @@ const renderTableRows = () => {
   const fetchFeedbacks = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/feedback/all");
+      const response = await axios.get("https://backend-production-7345.up.railway.app/api/feedback/all");
       setFeedbacks(response.data);
     } catch (error) {
       console.error("Error fetching feedbacks:", error);
@@ -1040,7 +1040,7 @@ const renderTableRows = () => {
 
   const handleSave = async (userId) => {
     try {
-      await axios.put(`/api/users/update/${userId}`, editedUserData);
+      await axios.put(`https://backend-production-7345.up.railway.app/api/users/update/${userId}`, editedUserData);
       alert(`${selectedSection} updated successfully!`);
       setEditingUserId(null); // Exit edit mode
       fetchSectionData(); // Refresh the list
@@ -1060,7 +1060,7 @@ const renderTableRows = () => {
   const handleDelete = async (userId) => {
     if (window.confirm(`Are you sure you want to delete this ${selectedSection}?`)) {
       try {
-        await axios.delete(`/api/users/delete/${userId}`);
+        await axios.delete(`https://backend-production-7345.up.railway.app/api/users/delete/${userId}`);
         alert(`${selectedSection} deleted successfully!`);
         fetchSectionData();
       } catch (error) {
@@ -1090,7 +1090,7 @@ const renderTableRows = () => {
       }
 
       else {
-        const response = await axios.get("/api/users/all");
+        const response = await axios.get("https://backend-production-7345.up.railway.app/api/users/all");
         const filteredData = response.data.filter(
           (user) => user.role === selectedSection.toUpperCase()
         );
@@ -1127,7 +1127,7 @@ const renderTableRows = () => {
 
   const handleDeleteCaseReport = async (caseId) => {
     try {
-      await axios.delete(`/api/case-reports/${caseId}`); // Delete case report by ID
+      await axios.delete(`https://backend-production-7345.up.railway.app/api/case-reports/${caseId}`); // Delete case report by ID
       // Re-fetch case reports after deletion
       fetchCaseReports();
     } catch (error) {
@@ -1137,7 +1137,7 @@ const renderTableRows = () => {
 
   const handleDeleteFeedback = async (feedbackId) => {
     try {
-      await axios.delete(`/api/feedback/${feedbackId}`); // Delete feedback by ID
+      await axios.delete(`https://backend-production-7345.up.railway.app/api/feedback/${feedbackId}`); // Delete feedback by ID
       // Re-fetch feedbacks after deletion
       fetchFeedbacks();
     } catch (error) {

@@ -49,7 +49,7 @@ const CharityDonations = () => {
                 amount: parseFloat(amount),
             };
 
-            const response = await axios.post('http://localhost:8080/api/payments/add', paymentData);
+            const response = await axios.post('https://backend-production-7345.up.railway.app/api/payments/add', paymentData);
 
             if (response.status === 200) {
                 alert("Thank you for your contribution!");

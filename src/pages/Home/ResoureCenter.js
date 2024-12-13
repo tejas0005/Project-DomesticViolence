@@ -16,8 +16,8 @@ const ResourceCenter = () => {
     useEffect(() => {
         const fetchResources = async () => {
             try {
-                const articlesResponse = await fetch('/api/articles/all');
-                const ebooksResponse = await fetch('/api/ebooks/all');
+                const articlesResponse = await fetch('https://backend-production-7345.up.railway.app/api/articles/all');
+                const ebooksResponse = await fetch('https://backend-production-7345.up.railway.app/api/ebooks/all');
                 const articles = await articlesResponse.json();
                 const ebooks = await ebooksResponse.json();
 

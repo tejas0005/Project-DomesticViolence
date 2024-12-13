@@ -28,7 +28,7 @@ const Counselor = () => {
   const fetchWebinars = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get('/api/webinars/all');
+      const response = await axios.get('https://backend-production-7345.up.railway.app/api/webinars/all');
       setWebinars(response.data);
     } catch (error) {
       console.error('Error fetching webinars:', error);
@@ -39,7 +39,7 @@ const Counselor = () => {
 
   const handleSaveWebinar = async (webinarId) => {
     try {
-      await axios.put(`/api/webinars/update/${webinarId}`, editedWebinarData);
+      await axios.put(`https://backend-production-7345.up.railway.app/api/webinars/update/${webinarId}`, editedWebinarData);
       alert('Webinar updated successfully!');
       setWebinars((prevWebinars) =>
         prevWebinars.map((webinar) =>
@@ -65,7 +65,7 @@ const Counselor = () => {
   const handleDeleteWebinar = async (webinarId) => {
     if (window.confirm('Are you sure you want to delete this webinar?')) {
       try {
-        await axios.delete(`/api/webinars/delete/${webinarId}`);
+        await axios.delete(`https://backend-production-7345.up.railway.app/api/webinars/delete/${webinarId}`);
         alert('Webinar deleted successfully!');
         setWebinars((prevWebinars) =>
           prevWebinars.filter((webinar) => webinar.id !== webinarId)
@@ -96,7 +96,7 @@ const Counselor = () => {
 
   const handleAddWebinar = async () => {
     try {
-      const response = await axios.post('/api/webinars/add', newWebinarData);
+      const response = await axios.post('https://backend-production-7345.up.railway.app/api/webinars/add', newWebinarData);
       alert('Webinar added successfully!');
       setWebinars((prevWebinars) => [...prevWebinars, response.data]);
       setNewWebinarData({
@@ -122,7 +122,7 @@ const Counselor = () => {
   useEffect(() => {
     const fetchCaseReports = async () => {
       try {
-        const response = await axios.get('/api/case-reports/all');
+        const response = await axios.get('https://backend-production-7345.up.railway.app/api/case-reports/all');
         const filteredReports = response.data.filter(
           (report) => report.preferredSupportType === 'legal advisor'
         );
@@ -152,7 +152,7 @@ const Counselor = () => {
 
   const handleDeleteCaseReport = async (id) => {
     try {
-      await axios.delete(`/api/case-reports/${id}`);
+      await axios.delete(`https://backend-production-7345.up.railway.app/api/case-reports/${id}`);
       setCaseReports(caseReports.filter((report) => report.id !== id));
     } catch (error) {
       console.error('Error deleting case report', error);

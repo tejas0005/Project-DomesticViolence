@@ -10,7 +10,7 @@ const CommunitySupport = () => {
 
     // Fetch webinars from the Spring Boot API
     useEffect(() => {
-        fetch("http://localhost:8080/api/webinars/all")
+        fetch("https://backend-production-7345.up.railway.app/api/webinars/all")
             .then((response) => response.json())
             .then((data) => {
                 setWebinars(data);

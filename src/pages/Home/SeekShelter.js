@@ -11,7 +11,7 @@ const SeekShelter = () => {
 
     useEffect(() => {
         // Fetch shelters from the backend
-        fetch('/api/shelters/all')
+        fetch('https://backend-production-7345.up.railway.app/api/shelters/all')
             .then(response => response.json())
             .then(data => {
                 setShelters(data);

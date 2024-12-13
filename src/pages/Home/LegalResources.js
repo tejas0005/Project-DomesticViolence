@@ -11,7 +11,7 @@ const LegalResources = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('/api/helplines/all')
+        fetch('https://backend-production-7345.up.railway.app/api/helplines/all')
             .then(response => response.json())
             .then(data => {
                 setHelplines(data);

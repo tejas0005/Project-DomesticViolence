@@ -12,7 +12,7 @@ const SeekHelp = () => {
 
     useEffect(() => {
         // Fetch support sessions from the backend
-        fetch('/api/support-sessions/all')
+        fetch('https://backend-production-7345.up.railway.app/api/support-sessions/all')
             .then(response => response.json())
             .then(data => {
                 setSupportSessions(data);

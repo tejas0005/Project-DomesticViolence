@@ -9,7 +9,7 @@ const HealthWellbeing = () => {
 
   // Fetch health books from the Spring Boot API
   useEffect(() => {
-    fetch("http://localhost:8080/api/healthbooks/all")
+    fetch("https://backend-production-7345.up.railway.app/api/healthbooks/all")
       .then((response) => response.json())
       .then((data) => {
         setHealthBooks(data);
