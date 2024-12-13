@@ -976,7 +976,7 @@ const renderTableRows = () => {
 
   const getMetrics = useCallback(async () => {
     try {
-      const response = await axios.get("/api/users/all");
+      const response = await axios.get("https://backend-production-7345.up.railway.app/api/users/all");
       const users = response.data;
 
       const totalUsers = users.filter((user) => user.role === "USER").length;
