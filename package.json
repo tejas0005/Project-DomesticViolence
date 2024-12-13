@@ -45,5 +45,5 @@
   "devDependencies": {
     "gh-pages": "^6.2.0"
   },
-  "proxy": "https://backend-production-81f88.up.railway.app"
+  "proxy": "backend-production-7345.up.railway.app"
 }
