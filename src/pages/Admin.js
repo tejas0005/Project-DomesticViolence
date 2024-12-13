@@ -434,7 +434,7 @@ const handleSaveEditedResource = async () => {
     );
 
     // Make the PUT request to the backend
-    await axios.put(`/api/${selectedResourceType}/${editingResourceId}`, editedResourceData);
+    await axios.put(`https://backend-production-7345.up.railway.app/api/${selectedResourceType}/${editingResourceId}`, editedResourceData);
 
     // Success alert and reset
     alert(`${selectedResourceType} updated successfully!`);
